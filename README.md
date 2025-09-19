@@ -9,6 +9,7 @@ Transform interfaces with seamless, frontEnd Control
 ## Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -29,6 +30,10 @@ Transform interfaces with seamless, frontEnd Control
 ## Overview
 
 Toggle-switch-component is a React-based UI library that offers a customizable, accessible toggle switch for modern web applications. Designed for seamless integration, it enables developers to create interactive on/off controls with elegant ease, icons, and color variations.
+
+## Demo
+
+Check out the [live demo](https://toggle-switch-component-nuusbu94p-shahabs-projects-0e67a7bc.vercel.app/) to see all the variants in action.
 
 ### Why toggle switch component?
 
@@ -57,12 +62,12 @@ Build toggle-switch-component from the source and install dependencies:
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/shahabroknidoost/toggle-switch-component
+git clone https://github.com/shahabroknidoost/Toggle-switch-component
 ```
 
 2. **Navigate to the project directory:**
 ```bash
-cd toggle-switch-component
+cd Toggle-switch-component
 ```
 
 3. **Install the dependencies:**
