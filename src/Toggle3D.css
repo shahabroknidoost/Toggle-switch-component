@@ -1,0 +1,165 @@
+/* Toggle3D.css - Styles for the 3D toggle component */
+
+/* Main toggle container */
+.toggle-3d {
+  width: 60px;
+  height: 32px;
+  background: #e5e7eb;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.toggle-3d:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Default theme when ON */
+.toggle-3d.default.on {
+  background: #34d399;
+  border-color: #10b981;
+}
+
+/* Blue theme when ON */
+.toggle-3d.blue.on {
+  background: #3b82f6;
+  border-color: #2563eb;
+}
+
+/* Disabled state */
+.toggle-3d.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.toggle-3d.disabled.on {
+  background: #9ca3af;
+  border-color: #6b7280;
+}
+
+/* Hover effects - only when not disabled */
+.toggle-3d:hover:not(.disabled) {
+  transform: scale(1.05);
+}
+
+.toggle-3d:active:not(.disabled) {
+  transform: scale(0.95);
+}
+
+/* The sliding knob */
+.toggle-3d-knob {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Move the knob when toggle is ON */
+.toggle-3d.on .toggle-3d-knob {
+  left: 30px;
+}
+
+/* Icon container */
+.icon-container {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+/* Cross and check icons */
+.icon-cross, .icon-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Default state - show cross, hide check */
+.icon-cross {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+  color: #6b7280;
+}
+
+.icon-check {
+  transform: scale(0) rotate(-90deg);
+  opacity: 0;
+  color: #10b981;
+}
+
+/* ON state - hide cross, show check */
+.toggle-3d.on .icon-cross {
+  transform: scale(0) rotate(90deg);
+  opacity: 0;
+}
+
+.toggle-3d.on .icon-check {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+/* Blue theme check color */
+.toggle-3d.on.blue .icon-check {
+  color: #3b82f6;
+}
+/* Green theme when ON */
+.toggle-3d.green.on {
+  background: #34d399;
+  border-color: #10b981;
+}
+
+/* Green theme checkmark color */
+.toggle-3d.on.green .icon-check {
+  color: #10b981;
+}
+
+/* Disabled icon colors */
+.toggle-3d.disabled .icon-cross,
+.toggle-3d.disabled .icon-check {
+  color: #9ca3af;
+}
+
+/* Subtle glow effect on hover */
+.toggle-3d::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: transparent;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.toggle-3d:hover:not(.disabled)::before {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+}
+
+.toggle-3d.on:hover:not(.disabled)::before {
+  background: radial-gradient(circle at center, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+}
+
+.toggle-3d.blue.on:hover:not(.disabled)::before {
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+}
