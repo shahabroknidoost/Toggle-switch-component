@@ -156,6 +156,7 @@ function App() {
   isOn={state}
   onChange={setState}
   showIcons
+  color="green"
 />
 ```
 
