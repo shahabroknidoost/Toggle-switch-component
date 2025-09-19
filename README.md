@@ -141,15 +141,6 @@ function App() {
 />
 ```
 
-### Green Theme
-```jsx
-<Toggle3D
-  isOn={state}
-  onChange={setState}
-  color="green"
-/>
-```
-
 ### With Icons
 ```jsx
 <Toggle3D
